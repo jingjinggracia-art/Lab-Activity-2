@@ -4,6 +4,14 @@ public class Vehicle {
    String model;
    int year;
    
+   
+   
+      Vehicle(String brand, String model, int year){
+         this.brand = brand;
+         this.model = model;
+         this.year = year;
+       }
+   
       void displayInfo() {
          System.out.println("Vehicle brand: " + brand + " // " + "Vehicle model: " + model + " // " + "Year: " + year);
        }
@@ -28,4 +36,5 @@ public class Vehicle {
              
        }         
     }   
+     
     
