@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Vehicle 1:");
         v1.displayResults();
 
-        System.out.println("Vehicle 2");
+        System.out.println("Vehicle 2:");
         v2.displayResults();
 
         System.out.println("Vehicle 3:");
