@@ -11,7 +11,7 @@ Vehicle brand: Koenigsegg // Vehicle model: Koenigsegg Jesko // Year: 2020
 Age: 6
 Vintage: false
 
-Vehicle 2
+Vehicle 2:
 
 Vehicle brand: Dodge // Vehicle model: 1970 Dodge Charger R/T // Year: 1970
 Age: 56
