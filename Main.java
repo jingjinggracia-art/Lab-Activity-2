@@ -4,30 +4,42 @@ public class Main {
 
         // A parent reference holding a child object
         Vehicle vehicle = new Car("Tesla", "Roadster", 2026, 4);
-        vehicle.displayInfo();
+        printDetails(vehicle);
+        vehicle.moveForward();
+        vehicle.moveBackwards();
+        vehicle.moveLeft();
+        vehicle.moveRight();
 
         System.out.println();
-        
+
         // The same variable now refers to a truck object
         vehicle = new Truck("IZUZU", "NMR85H", 2023, 6);
-        vehicle.displayInfo();
-        
+        printDetails(vehicle);
+        vehicle.moveForward();
+        vehicle.moveBackwards();
+        vehicle.moveLeft();
+        vehicle.moveRight();
+
         System.out.println();
-        
 
         // The same variable now refers to a motorcycle object
         vehicle = new Motorcycle("Yamaha", "NmaxV3", 2026, "durable");
-        vehicle.displayInfo();
+        printDetails(vehicle);
+        vehicle.moveForward();
+        vehicle.moveBackwards();
+        vehicle.moveLeft();
+        vehicle.moveRight();
 
         System.out.println();
 
         // One method accepts different Vehicle subclasses
         Car car = new Car("Toyota", "Innova", 2023, 4);
         Motorcycle motor = new Motorcycle("Yamaha", "Fazzio", 2025, "fast");
-        
-        System.out.println();
 
+        printDetails(car);
         printDetails(motor);
+
+        System.out.println();
 
         // An array holds different vehicle subclasses
         Vehicle[] vehicles = {
@@ -37,8 +49,24 @@ public class Main {
             new Truck("IZUZU", "NMR85H", 2023, 6)
         };
 
-            for (Vehicle currentVehicle : vehicles) {
-            printDetails(currentVehicle);
+        for (Vehicle currentVehicle : vehicles) {
+            currentVehicle.displayResults();
+
+            currentVehicle.moveForward();
+            currentVehicle.moveBackwards();
+            currentVehicle.moveLeft();
+            currentVehicle.moveRight();
+
             System.out.println();
         }
     }
+    
+    public static void printDetails(Vehicle vehicle) {
+        vehicle.displayResults();
+    }
+}
+
+
+   
+
+        
