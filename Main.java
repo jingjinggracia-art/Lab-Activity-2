@@ -35,12 +35,32 @@ public class Main {
         // One method accepts different Vehicle subclasses
         Car car = new Car("Toyota", "Innova", 2023, 4);
         Motorcycle motor = new Motorcycle("Yamaha", "Fazzio", 2025, "fast");
+        Truck truck = new Truck("ISUZU", "NMR85H", 2023, 6);
 
         printDetails(car);
         printDetails(motor);
 
         System.out.println();
-
+        
+         Printer printer = new Printer();
+         
+         System.out.println();
+         
+        Serviceable[] serviceItems = {
+            car,
+            motor,
+            truck,
+            printer
+        };
+        
+         for (Serviceable item : serviceItems) {
+            performService(item);
+        }
+        
+         System.out.println();
+         
+         
+        
         // An array holds different vehicle subclasses
         Vehicle[] vehicles = {
             new Car("Toyota", "Vios", 2020, 4),
@@ -56,6 +76,7 @@ public class Main {
             currentVehicle.moveBackwards();
             currentVehicle.moveLeft();
             currentVehicle.moveRight();
+            currentVehicle.move();
 
             System.out.println();
         }
@@ -64,6 +85,11 @@ public class Main {
     public static void printDetails(Vehicle vehicle) {
         vehicle.displayResults();
     }
+    
+    public static void performService(Serviceable item) {
+        item.service();
+    }
+
 }
 
 
