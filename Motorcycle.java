@@ -4,9 +4,37 @@ public class Motorcycle extends Vehicle {
       super(b,m,y);
       this.engineType = e;
    }
-   @Override
-   public void displayInfo() {
-      super.displayInfo();
-      System.out.println("Engine: " + engineType);
+   
+    @Override
+    void displayInfo() {
+        System.out.println(
+            "Vehicle brand: " + getBrand() +
+            " // Vehicle model: " + getModel() +
+            " // Year: " + getYear()
+        );
+
+        System.out.println("Engine: " + engineType);
+        
+      
+    }
+    
+      @Override
+       public void moveForward() {
+         System.out.println("Motorcycle moves forward.");
       }
-     }
+
+      @Override
+       public void moveBackwards() {
+         System.out.println("Motorcycle moves backwards.");
+      }
+
+      @Override
+       public void moveLeft() {
+         System.out.println("Motorcycle turns left.");
+      }
+
+      @Override
+       public void moveRight() {
+        System.out.println("Motorcycle turns right.");
+   }
+}

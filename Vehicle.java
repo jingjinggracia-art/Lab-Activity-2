@@ -1,4 +1,4 @@
-public class Vehicle {
+public abstract class Vehicle {
 
     private String brand;
     private String model;
@@ -36,13 +36,15 @@ public class Vehicle {
         return false;
     }
 
-    void displayInfo() {
-        System.out.println(
-            "Vehicle brand: " + brand +
-            " // Vehicle model: " + model +
-            " // Year: " + year
-        );
-    }
+   abstract void displayInfo();
+   
+         public abstract void moveForward();
+
+         public abstract void moveBackwards();
+
+         public abstract void moveLeft();
+
+         public abstract void moveRight();
 
     int calculateAge() {
         return 2026 - year;
@@ -61,4 +63,5 @@ public class Vehicle {
 
         System.out.println();
     }
+  
 }
