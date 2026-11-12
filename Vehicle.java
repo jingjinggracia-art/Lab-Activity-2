@@ -45,6 +45,9 @@ public abstract class Vehicle {
          public abstract void moveLeft();
 
          public abstract void moveRight();
+         
+         public abstract void move();
+         
 
     int calculateAge() {
         return 2026 - year;
