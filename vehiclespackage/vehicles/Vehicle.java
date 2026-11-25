@@ -1,8 +1,11 @@
+package vehicles;
+   import services.Serviceable;
+   
 public abstract class Vehicle {
 
-    private String brand;
-    private String model;
-    private int year;
+    public String brand;
+    public String model;
+    public int year;
 
     Vehicle(String brand, String model, int year) {
         this.brand = brand;
@@ -45,6 +48,9 @@ public abstract class Vehicle {
          public abstract void moveLeft();
 
          public abstract void moveRight();
+         
+         public abstract void move();
+         
 
     int calculateAge() {
         return 2026 - year;
@@ -54,7 +60,7 @@ public abstract class Vehicle {
         return calculateAge() > 25;
     }
 
-    void displayResults() {
+    public void displayResults() {
         System.out.println();
 
         displayInfo();

@@ -1,5 +1,7 @@
+package vehicles;
+   import services.Serviceable;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Serviceable {
     private int doors;
 
     public Car(String brand, String model, int year, int doors) {
@@ -37,6 +39,15 @@ public class Car extends Vehicle {
       @Override
        public void moveRight() {
         System.out.println("Car turns right.");
-      }
+     }
+      
+      @Override
+    public void move() {
+        System.out.println("Car moves on the road.");
+    }
 
+      @Override
+    public void service() {
+        System.out.println("Car: Check oil and brakes.");
+    }
 }
